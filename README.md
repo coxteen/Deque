@@ -1,7 +1,5 @@
 # Deque
 
-This is an implementation of Deque in C++.
-
 For this implementation i used a template class named Deque where i defined the next methods : 
  - a constructor to initialize the deque
  - push_front - add an element in front
