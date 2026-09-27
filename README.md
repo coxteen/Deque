@@ -1,78 +1,104 @@
 <div align="center">
 
-# Deque
+# 🚀 Deque
 
-**A C++ template deque with block-based storage and a console menu for exploring its operations.**
+**A C++ deque implementation that provides efficient front and back operations for dynamic data storage in a Windows console app.**
 
-[![C++](https://img.shields.io/badge/C%2B%2B-Template-00599C?style=flat-square&logo=cplusplus&logoColor=white)](https://isocpp.org/)
-[![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2022-5C2D91?style=flat-square&logo=visualstudio&logoColor=white)](https://visualstudio.microsoft.com/)
+[![Platform](https://img.shields.io/badge/Windows-10%2B-0078D6?style=flat-square&logo=microsoft&logoColor=white)](https://www.microsoft.com/windows/)
+[![Language](https://img.shields.io/badge/C%2B%2B-17-00599C?style=flat-square&logo=cplusplus&logoColor=white)](https://isocpp.org/)
+[![IDE](https://img.shields.io/badge/Visual%20Studio-2022-5C2D91?style=flat-square&logo=visualstudio&logoColor=white)](https://visualstudio.microsoft.com/vs/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](#-license--author)
 
 </div>
 
 ---
 
-## Overview
+<p align="center">
+  <img src="./assets/demo.gif" alt="Deque interactive console demo" width="850">
+</p>
 
-This project implements a generic double-ended queue (`Deque<dataType>`) in C++. Elements are stored in fixed-size blocks, with a dynamically resized array of block pointers. A console application provides an interactive menu for trying the deque operations.
+---
 
-## Key Features
+## 📌 Problem & Motivation
 
-- **Operations at both ends:** Add and remove elements at the front or back.
-- **Block-based storage:** Stores elements in blocks of eight and expands its block-pointer array as needed.
-- **Template-based:** Use the deque with different element types that support the operations you need.
-- **Indexed operations:** Access, insert, and erase elements by position.
-- **Interactive demo:** Run the console app to exercise the API through a menu.
+Many data structures need fast insertion and removal at both ends, but standard containers do not always provide the flexibility needed for custom block-based queue designs. A manual deque implementation helps demonstrate how memory can be organized efficiently while still keeping the API simple and usable.
 
-## Architecture & How It Works
+**Deque** addresses this by combining a template-based data structure with a small interactive console interface:
 
-The console menu in `main.cpp` reads a user's selection and calls the corresponding method on `Deque<int>`. The template implementation in `Deque/Deque.h` maps elements to blocks and indices.
+- **⚡ Fast front/back access:** Add and remove data from both ends without reshaping the whole structure.
+- **🧠 Efficient block storage:** Elements are stored in fixed-size blocks to manage dynamic growth in a clear way.
+- **🛠️ Practical learning value:** The project is designed to be easy to inspect, test, and extend in C++.
+
+---
+
+## ✨ Key Features
+
+- **⚡ Double-ended operations:** Supports insertion and removal from both the front and back.
+- **📦 Block-based storage:** Organizes elements into fixed-size storage blocks for structured memory handling.
+- **🔎 Indexed access:** Provides access, insertion, and deletion at arbitrary positions.
+- **🧪 Console demo:** Lets users explore the deque through a simple interactive menu.
+- **💡 Template design:** Works with different element types through the generic implementation.
+
+---
+
+## 🧠 Architecture & How It Works
+
+The console menu in `main.cpp` interacts with the `Deque<int>` implementation, while the template logic in `Deque/Deque.h` manages block pointers, indexing, and storage layout.
 
 ```mermaid
 flowchart LR
     User[User] --> Menu[Console menu]
-    Menu --> API[Deque data structure]
-    API --> Blocks[Block pointer array]
+    Menu --> Deque[Deque data structure]
+    Deque --> Blocks[Block pointer array]
     Blocks --> Elements[Fixed-size element blocks]
-    API --> Output[Console output]
+    Deque --> Output[Console output]
     Output --> User
 ```
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-| Category | Technology |
-| --- | --- |
-| Language | C++ |
-| IDE / build project | Visual Studio 2022, MSVC v143 |
-| Application | Windows console application |
-| License | MIT |
+| Category | Technology | Purpose / Highlights |
+| --- | --- | --- |
+| Language & Runtime | C++ 17 | Core data structure and console application logic. |
+| IDE / Build Tool | Visual Studio 2022 + MSVC v143 | Windows-native C++ development and compilation. |
+| Target Platform | Windows 10+ / x64 console app | Built for desktop C++ development environments. |
+| Project Structure | `Deque/Deque.h`, `Deque/Deque.cpp`, `main.cpp` | Main implementation and demonstration entry point. |
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Windows
-- Visual Studio 2022 with the **Desktop development with C++** workload
-- MSVC v143 toolset and a Windows 10 SDK
+- **Windows 10 or newer**
+- **Visual Studio 2022**
+- **Desktop development with C++** workload
+- **MSVC v143** toolset
+- **Windows 10 SDK**
+
+### Install Visual Studio 2022
+
+1. Download [Visual Studio 2022](https://visualstudio.microsoft.com/) from the official site.
+2. Run the installer.
+3. Select the **Desktop development with C++** workload.
+4. In the installation details, ensure these components are included:
+   - **MSVC v143 - VS 2022 C++ x64/x86 build tools**
+   - **Windows 10 SDK**
+5. Finish the installation and reopen Visual Studio.
 
 ### 1. Open the solution
 
-Open `Deque.sln` in Visual Studio. Select a configuration such as **Debug** and a platform such as **x64**.
+Open `Deque.sln` in Visual Studio and choose a configuration such as **Debug** and a platform such as **x64**.
 
 ### 2. Build and run
 
-Build the solution, then start debugging without the debugger with **Ctrl+F5**. The console menu lets you push, pop, inspect, insert, erase, and print deque elements.
+Build the solution and run it with **Ctrl+F5** to start the console app without debugging. The menu allows you to test push, pop, insert, erase, and print operations.
 
-### 3. Use the deque in C++
-
-The template implementation is in `Deque/Deque.h`:
+### 3. Example usage
 
 ```cpp
 #include "Deque/Deque.h"
 
 int main() {
     Deque<int> values;
-
     values.push_back(10);
     values.push_front(5);
     values.insert(7, 1);
@@ -81,28 +107,13 @@ int main() {
     int last = values.back();
     int middle = values[1];
 
-    values.erase(1);
     values.pop_front();
     values.pop_back();
+    return 0;
 }
 ```
 
-### Available operations
+## 📄 License & Author
 
-| Method | Description |
-| --- | --- |
-| `push_front(value)` / `push_back(value)` | Add an element to either end. |
-| `pop_front()` / `pop_back()` | Remove an element from either end. |
-| `front()` / `back()` | Return the first or last element. |
-| `insert(value, index)` / `erase(index)` | Insert or remove an element by position. |
-| `operator[](index)` | Return a reference to an element by position. |
-| `empty()` / `size()` | Check whether the deque is empty or get its element count. |
-| `clear()` | Remove all elements. |
-| `print()` | Print the elements grouped by storage block. |
-
-Pass a valid index to indexed operations. Check that the deque is non-empty before calling `front()` or `back()`.
-
-## License & Author
-
-- **Author:** Costin-Daniel Ghiujan
-- **License:** [MIT](LICENSE)
+- **Author:** [Costin Ghiujan](https://github.com/coxteen)
+- **License:** Released under the [MIT License](LICENSE)

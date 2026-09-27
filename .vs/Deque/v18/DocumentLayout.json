@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Stuff\\coding-projects\\desktop-apps\\deque\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B91047F4-636F-4830-A8F9-02716FB9611E}|Deque\\Deque.vcxproj|C:\\Stuff\\coding-projects\\desktop-apps\\deque\\Deque\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B91047F4-636F-4830-A8F9-02716FB9611E}|Deque\\Deque.vcxproj|solutionrelative:Deque\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Stuff\\coding-projects\\desktop-apps\\deque\\Deque\\main.cpp",
+              "RelativeDocumentMoniker": "Deque\\main.cpp",
+              "ToolTip": "C:\\Stuff\\coding-projects\\desktop-apps\\deque\\Deque\\main.cpp",
+              "RelativeToolTip": "Deque\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-27T12:20:01.154Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
