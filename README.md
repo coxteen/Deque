@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Deque
+# Deque
 
 **A C++ deque implementation that provides efficient front and back operations for dynamic data storage in a Windows console app.**
 
