@@ -2,7 +2,7 @@
 
 # Deque
 
-**A C++ deque implementation that provides efficient front and back operations for dynamic data storage in a Windows console app.**
+**C++ deque implementation that provides efficient front and back operations for dynamic data storage in a Windows console app**
 
 [![Platform](https://img.shields.io/badge/Windows-10%2B-0078D6?style=flat-square&logo=microsoft&logoColor=white)](https://www.microsoft.com/windows/)
 [![Language](https://img.shields.io/badge/C%2B%2B-17-00599C?style=flat-square&logo=cplusplus&logoColor=white)](https://isocpp.org/)
